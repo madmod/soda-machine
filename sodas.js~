@@ -1,0 +1,22 @@
+// The List Of Soda Choices
+module.exports = [
+	{
+		name: 'Dr. Pepper'
+	},
+	{
+		name: 'Sprite'
+	},
+	{
+		name: 'Coke'
+	},
+	{
+		name: 'Barbeque Cola'
+	},
+	{
+		name: 'Salt Cola'
+	},
+	{
+		name: 'Ranch Cola'
+	}
+];
+

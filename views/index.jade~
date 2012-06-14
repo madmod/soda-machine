@@ -1,0 +1,71 @@
+body
+	link(rel='stylesheet', href='/stylesheets/index.css')
+	
+	//- Get Light Class Names And Current Class
+	- var lightOn = 'light-on';
+	- var lightOff = 'light-off';
+	- var lightClass = light ? lightOn : lightOff;
+	
+	script(type='text/javascript')
+		$(function () {
+			
+			window.rest = function rest(url, callback, run) {
+				var run = (typeof run != "boolean") ? false : run;
+				var restGet = function () {
+					$.get(url, function (result) {
+						console.log("REST Callback", url, result);
+						if (typeof callback == "function")
+							callback.apply(this, arguments);
+					});
+				};
+				return !run ? restGet : restGet.apply(this, arguments);
+			};
+			
+			// Toggle The Light On Click
+			$('.header').click( 
+				rest(
+					"/light/toggle", 
+					function (state) {
+						// Set The Logo Style To Match The New Light State
+						var newClass = state ? "#{lightOn}" : "#{lightOff}";
+						var oldClass = !state ? "#{lightOn}" : "#{lightOff}";
+						$('.header').toggleClass(newClass).toggleClass(oldClass);
+					}
+				)
+			);
+			
+			// Vend The Sodas On Click
+			$('.sodas .soda').each(function (i, soda) {
+				$(soda).on('click', rest("/soda/" + i + "/vend"));
+			});
+			
+			// Prompt To Vend A Random Soda On Click
+			$('.soda.random').click( 
+				rest(
+					"/soda/random", 
+					function (soda) {
+						// TODO: Show A Dialog Asking If You Want To Vend It
+						console.log("Got Random Soda", soda.name);
+					}
+				)
+			);
+			
+			// TODO: Prompt Or Vend A Random Soda On iDevice Shake, Vend On Repeat Shake
+			
+			// TODO: Vend A Random Soda With An "I'm Feeling Lucky" Button
+			
+		});
+	h1= title
+	.header(class="#{lightClass}")
+		.logo
+			h1 Dr. Pepper
+	.coinbox
+		h3 Coin Box
+		h3 30 Cents
+	.sodas
+		each soda, i in sodas
+			h2(class="soda") #{soda.name}
+	.random
+		h2(class=["random", "soda"]) Random Soda
+
+
