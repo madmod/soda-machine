@@ -1,58 +1,36 @@
-info it worked if it ends with ok
-verbose cli [ 'node', '/usr/bin/npm', 'install', 'johnny-five' ]
-info using npm@1.1.4
-info using node@v0.6.12
-verbose config file /home/sodadrinker/.npmrc
-verbose config file /usr/etc/npmrc
-verbose config file /usr/share/npm/npmrc
-verbose caching /home/sodadrinker/sodamachine/package.json
-verbose loadDefaults application-name@0.0.1
-verbose caching /home/sodadrinker/sodamachine/node_modules/express/package.json
-verbose caching /home/sodadrinker/sodamachine/node_modules/jade/package.json
-verbose from cache /home/sodadrinker/sodamachine/package.json
-verbose readDependencies: using package.json deps
-verbose cache add [ 'johnny-five', null ]
-silly cache add: name, spec, args [ undefined, 'johnny-five', [ 'johnny-five', null ] ]
-verbose parsed url { pathname: 'johnny-five',
-verbose parsed url   path: 'johnny-five',
-verbose parsed url   href: 'johnny-five' }
-verbose addNamed [ 'johnny-five', '' ]
-verbose addNamed [ null, '' ]
-silly name, range, hasData [ 'johnny-five', '', false ]
-verbose raw, before any munging johnny-five
-verbose url resolving [ 'https://registry.npmjs.org/', './johnny-five' ]
-verbose url resolved https://registry.npmjs.org/johnny-five
-verbose etag "41H0LLTAT9U04XWMLJNBKQL6V"
-http GET https://registry.npmjs.org/johnny-five
-http 304 https://registry.npmjs.org/johnny-five
-silly get cb [ 304,
-silly get cb   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
-silly get cb     etag: '"41H0LLTAT9U04XWMLJNBKQL6V"',
-silly get cb     date: 'Tue, 12 Jun 2012 00:13:14 GMT',
-silly get cb     'content-length': '0' } ]
-verbose etag johnny-five from cache
-silly name, range, hasData 2 [ 'johnny-five', '', true ]
-silly versions [ 'johnny-five', [] ]
-ERR! Error: No compatible version found: johnny-five
-ERR! No valid targets found.
-ERR! Perhaps not compatible with your version of node?
-ERR!     at installTargetsError (/usr/share/npm/lib/cache.js:488:10)
-ERR!     at next_ (/usr/share/npm/lib/cache.js:438:17)
-ERR!     at next (/usr/share/npm/lib/cache.js:415:44)
-ERR!     at /usr/share/npm/lib/cache.js:408:5
-ERR!     at saved (/usr/share/npm/lib/utils/npm-registry-client/get.js:147:7)
-ERR!     at Object.oncomplete (/usr/lib/nodejs/graceful-fs.js:230:7)
-ERR! You may report this log at:
-ERR!     <http://bugs.debian.org/npm>
-ERR! or use
-ERR!     reportbug --attach /home/sodadrinker/sodamachine/npm-debug.log npm
-ERR! 
-ERR! System Linux 3.2.0-23-generic
-ERR! command "node" "/usr/bin/npm" "install" "johnny-five"
-ERR! cwd /home/sodadrinker/sodamachine
-ERR! node -v v0.6.12
-ERR! npm -v 1.1.4
-ERR! message No compatible version found: johnny-five
-ERR! message No valid targets found.
-ERR! message Perhaps not compatible with your version of node?
-verbose exit [ 1, true ]
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
+2 info using npm@2.11.2
+3 info using node@v0.12.5
+4 verbose node symlink /usr/local/bin/node
+5 verbose run-script [ 'prestart', 'start', 'poststart' ]
+6 info prestart soda-machine@0.5.1
+7 info start soda-machine@0.5.1
+8 verbose unsafe-perm in lifecycle true
+9 info soda-machine@0.5.1 Failed to exec start script
+10 verbose stack Error: soda-machine@0.5.1 start: `node app.js`
+10 verbose stack Exit status 1
+10 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:213:16)
+10 verbose stack     at EventEmitter.emit (events.js:110:17)
+10 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+10 verbose stack     at ChildProcess.emit (events.js:110:17)
+10 verbose stack     at maybeClose (child_process.js:1015:16)
+10 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+11 verbose pkgid soda-machine@0.5.1
+12 verbose cwd /Users/john/Development/John/soda-machine
+13 error Darwin 14.3.0
+14 error argv "node" "/usr/local/bin/npm" "start"
+15 error node v0.12.5
+16 error npm  v2.11.2
+17 error code ELIFECYCLE
+18 error soda-machine@0.5.1 start: `node app.js`
+18 error Exit status 1
+19 error Failed at the soda-machine@0.5.1 start script 'node app.js'.
+19 error This is most likely a problem with the soda-machine package,
+19 error not with npm itself.
+19 error Tell the author that this fails on your system:
+19 error     node app.js
+19 error You can get their info via:
+19 error     npm owner ls soda-machine
+19 error There is likely additional logging output above.
+20 verbose exit [ 1, true ]
