@@ -1,9 +1,33 @@
 {
-    "name": "application-name"
-  , "version": "0.0.1"
-  , "private": true
-  , "dependencies": {
-      "express": "2.5.8"
-    , "jade": ">= 0.0.1"
-  }
+  "name": "soda-machine",
+  "version": "0.5.1",
+  "private": true,
+  "dependencies": {
+    "express": "2.5.8",
+    "jade": ">= 0.0.1",
+    "johnny-five": "^0.8.84"
+  },
+  "description": "Control a vintage soda machine with a REST API.",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madmod/soda-machine.git"
+  },
+  "keywords": [
+    "johnny-five",
+    "arduino",
+    "firmata",
+    "soda"
+  ],
+  "author": "John Wells <madmodmail@gmail.com> (https://github.com/madmod)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madmod/soda-machine/issues"
+  },
+  "homepage": "https://github.com/madmod/soda-machine#readme"
 }
