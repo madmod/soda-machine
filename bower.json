@@ -1,0 +1,30 @@
+{
+  "name": "soda-machine",
+  "version": "0.5.1",
+  "homepage": "https://github.com/madmod/soda-machine",
+  "authors": [
+    "madmod <madmodmail@gmail.com>"
+  ],
+  "description": "Control a vintage soda machine with a REST API.",
+  "main": "app.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "johnny-five",
+    "arduino",
+    "firmata",
+    "soda"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
